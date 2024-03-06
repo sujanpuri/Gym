@@ -4,30 +4,32 @@
     scroll-behavior: smooth;
     margin: 0;
     padding: 0px;
+    color: white;
+}
+body
+{
+    background-color: black;
+}
+#mainimg
+{
+    height: 50vw;
+    width: 100vw;
+    top: -60px;
+    position: absolute;
+    z-index: -1;
+}
+h1
+{
+    color: #00FF00;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 .profilecont
 {
     color: white;
     width: 100vw;
     font-family: cursive;
-    background-image: url("Gym.jpg");
-    background-size: 100vw 40vw;
-    background-size: cover;
-    background-repeat: no-repeat;
 }
 
-@media only screen and (max-width:800px)
-{
-.profilecont
-{
-    color: white;
-    width: 100vw;
-    font-family: cursive;
-    background-image: url("Gym.jpg");
-    background-size: 100vw 100vw;
-    background-repeat: no-repeat;
-}
-}
 /* NAV BAR*/
 .navcont
 {
@@ -40,14 +42,32 @@
 }
 @media only screen and (max-width:800px)
 {
+    body
+    {
+        text-align: center;
+        margin: 10px;
+    }
+    #mainimg
+    {
+        top: 15vw;
+        left: 2vw;
+        width: 100vw;
+        height: 60vw;
+    }
     .navcont
     {
         font-size: 4.5vw;
-        /* margin: 1vw; */
-        color: white;
+        color: white;   
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+    }
+}
+@media only screen and (max-width:650px)
+{
+    #mainimg
+    {
+        top: 21vw;
     }
 }
 /***/
@@ -73,7 +93,11 @@
 {
     margin: 0px 1vw 0px 1vw;
     display: flex;
+    font-size: 50px;
+    font-weight: bolder;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     align-items: center;
+    color:  #00FF00;
 }
 .icon img
 {
@@ -100,40 +124,38 @@
 {
     font-size: 4.5vw;
     list-style: none;
+    display: flex;
+    justify-content: center;
     text-decoration: none;
     margin: 0px 30px 0px 5px;
     transition: transform 1s ease;
     transform: scale(1);
 }
 .nav div a{
-    color: white;
+    font-size: 30px;
+    color: #00FF00;
     text-decoration-line: none;
 }
 .nav div:hover
 {
-    color: red;
-    font-size: 4.5vw;
-    list-style: none;
-    margin: 0px 30px 0px 5px;
     transition: transform 0.5s ease;
     transform: scale(1.07);
 }
 .nav div a:hover
 {
-    color: greenyellow;
+    color:  #ffffff;
     text-decoration-line: none;
 }
-/* .nav div:active
+@media only screen and (max-width:650px)
 {
-    height: 4vw;
-    color: blue;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-} */
-
+    .nav div a{
+        margin-right: 5px;
+        font-size: 20px;
+    }
+}
 
 /*PROFILE*/
+
 .profile
 {
     display: flex;
@@ -153,28 +175,19 @@
         margin: 3vw 2vw 5vw 1vw;
     }
 }
-.banner
-{
-    padding: 5px;
-    border-top: 1px solid greenyellow;
-    border-top-right-radius: 12vw;
-}
+
 .banner p
 {
-    margin: 0px;
-    display: flex;
-    justify-content: left;
+    text-align: start;
+    margin-left: 25px;
+    font-size: 25px;
 }
-.moto
-{
-    border-bottom: 1px solid greenyellow;
-    border-bottom-left-radius: 12vw;    
-}
+
 .moto p
 {
-    margin: 0px;
-    display: flex;
-    justify-content: right;
+    margin-right: 35px;
+    font-size: 25px;
+    text-align: end ;
 }
 
 /* About Us */
@@ -195,42 +208,24 @@
     display: flex;
     flex-direction: column-reverse;
     justify-content: center;
-    align-items: center;
+    align-items: start;
 }
 }
 .about
 {
-    border: 0.5px solid black;
     padding: 1vw;
-    width: 64vw;
-    height: 20vw;
     overflow: auto;
     display: flex;
     flex-direction: column;
 }
-@media only screen and (max-width:800px)
+.aboutphotos
 {
-.about
-{
-    border: 0.5px solid black;
-    padding: 1vw;
-    margin: 5px;
-    width: 95vw;
-    height: 50vw;
-    overflow: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-}
-.about h1
-{
-    margin: 0px;
+    align-self: center;
 }
 .aboutphotos img
 {
     border-radius: 15px;
-    width: 30vw;
+    width: 15vw;
     transition: transform 1s ease;
     transform: scale(1);
 }
@@ -245,23 +240,15 @@
 {
     margin: 10px;
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
 }
-@media only screen and (max-width:800px)
+.servicephotos
 {
-    .servicecont
-{
-    margin: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-}
+    align-self: center;
 }
 .servicephotos img
 {
-    width: 30vw;
+    width: 15vw;
     border-radius: 15px;
     transition: transform 1s ease;
     transform: scale(1);
@@ -273,34 +260,19 @@
 }
 .service
 {
-    border: 0.5px solid black;
-    width: 80vw;
-    height: 20vw;
-    padding: 0vw 1vw 0 1vw;
-    margin-left: 1vw;
-    display: flex;
-    flex-direction: column; 
-    overflow: auto;
-}
-@media only screen and (max-width:800px)
-{
-.service
-{
-    border: 0.5px solid black;
-    width: 95vw;
-    height: 50vw;
     padding: 0vw 1vw 0 1vw;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    overflow: auto;
-}
-}
-.service h1
-{
-    margin: 0px;
 }
 
+@media only screen and (max-width:800px)
+{
+    .servicecont
+    {
+        display: flex;
+        flex-direction: column;
+    }
+}
 /* PHOTOS */
 
 .photos div
@@ -339,7 +311,6 @@
 .formcont
 {
     margin: 10px;
-    background-color: rgb(202, 200, 200);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -359,10 +330,14 @@
 .input
 {
     width: 30vw;
+    color: black;
 }
 .button
 {
     margin: 10px;
+    background-color: #00FF00;
+    padding: 5px;
+    border-radius: 10px;
     transition: transform 0.5s ease;
     transform: scale(1);
 }
